@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Convead. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_save_after">
+        <observer name="convead_order_save_after" instance="Convead\Tracker\Observer\OnSalesOrderSaveAfter"/>
+    </event>
+    <event name="checkout_cart_product_add_after">
+        <observer name="convead_cart_product_add_after" instance="Convead\Tracker\Observer\OnCheckoutCartProductAddAfter"/>
+    </event>
+    <event name="sales_quote_remove_item">
+        <observer name="convead_quote_remove_item" instance="Convead\Tracker\Observer\OnSalesQuoteRemoveItem"/>
+    </event>
+    <event name="checkout_cart_update_items_after">
+        <observer name="convead_cart_update_items_after" instance="Convead\Tracker\Observer\OnCheckoutCartUpdateItemsAfter"/>
+    </event>
+    <event name="checkout_submit_all_after">
+        <observer name="convead_checkout_submit_all_after" instance="Convead\Tracker\Observer\OnCheckoutSubmitAllAfter"/>
+    </event>
+    <event name="checkout_type_onepage_save_order_after">
+        <observer name="convead_onepage_save_order_after" instance="Convead\Tracker\Observer\OnCheckoutSubmitAllAfter"/>
+    </event>
+    <event name="checkout_cart_save_after">
+        <observer name="convead_cart_save_after" instance="Convead\Tracker\Observer\OnCheckoutCartSaveAfter"/>
+    </event>
+</config>

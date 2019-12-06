@@ -1,0 +1,15 @@
+<?php
+/** @var \Convead\Tracker\Block\Tracking $block */
+?>
+<?php if ($block->isEnabled()): ?>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Convead_Tracker/js/convead-tracker": {
+                 "apiKey": "<?= $block->getConveadApiKey() ?>",
+                 "viewProductConfig": <?= $block->getProductConfig() ?>
+            }
+        }
+    }
+</script>
+<?php endif; ?>

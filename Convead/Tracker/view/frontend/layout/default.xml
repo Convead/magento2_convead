@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Convead. All rights reserved.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Convead\Tracker\Block\Tracking"
+                   name="convead_tracking_head"
+                   template="Convead_Tracker::convead_tracker/head.phtml"
+                   ifconfig="sales/convead_tracker/enabled"
+                   after="-"/>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Convead. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Convead\Tracker\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">ConveadTrackerLogger</argument>
+            <argument name="handlers" xsi:type="array">
+                <item name="debug" xsi:type="object">Convead\Tracker\Logger\Handler\Debug</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Convead\Tracker\Observer\ObserverDataProvider" shared="true" />
+</config>
